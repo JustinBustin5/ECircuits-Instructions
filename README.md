@@ -30,17 +30,26 @@ If you click on the output pin of the DATA CONSTANT chip while in the Data Edito
 
 # Chips
 
-### Logic Chips
+### Logic Chips (1.0)
 The logic chips, (AND, NOT, OR, XOR, NAND, NOR, XNOR) are foundational structures in computer science, and will not be explained in this guide. You can easily find the answers on Google for these.
-### SWITCH
+### SWITCH (1.0)
 The switch chip is a chip with only an output. Clicking on the output while in the Switch clickmode will toggle the output power.
-### DATA CONSTANT
+### DATA CONSTANT (1.0)
 This is like the SWITCH chip, but for Data. Clicking on the output in the Data Editor clickmode will allow you to change the Data output.
-### DISPLAY
+### DISPLAY (1.0)
 There are two inputs to the DISPLAY chip. The first one is power. The display will not show anything unless the power is on.<br>
 The second input is the Data. Feed in Data, and if the display is powered on, it will show the Data.
-### MATH
-The MATH chip allows you to perform arithmetic operations on numbers fed in through DATA.<br>
+### MATH (1.0)
+The MATH chip allows you to perform arithmetic operations on numbers fed in through Data.<br>
 The first input is the first number to add/subtract/multiply/divide. There will be an error outputted if the input is not a number or if the number is too large.<br>
 The second input is the second number to add/subtract/multiply/divide. There will be an error outputted if the input is not a number or if the number is too large.<br>
 The third input is the operation to preform. Valid inputs are "+", "-", "\*", and "/". If something other than one of these is provided, an error will be output.
+### LED (1.1)
+The LED chip simply turn on the light and the output when the input is on. No longer do you need displays just to show the output of a non-Data circuit!
+### EQUALS (1.1)
+The EQUALS chip compares the Data inputs and powers on the output if the data is equal.
+### DATASTORE (1.1)
+The DATASTORE chip stores data. It has two power inputs, (referred to as 1A and 1B) and two Data inputs. (referred to as 2A and 2B)<br>
+The output pin outputs the Data stored in the chip.<br>
+On the rising edge (moment where the power goes from off to on) of input 1A, the chip will store whatever data is fed in through input 2A.<br>
+On the rising edge of input 2A, the chip will store whatever data is fed in through input 2A.
